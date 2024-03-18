@@ -1,0 +1,68 @@
+<!doctype html>
+<!DOCTYPE lang=en>
+{% load static %}
+<html>
+
+<head>
+    <title>Home Page </title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="project web.">
+    <meta name="author" content="Rinn & Laputa">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&family=Mulish:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9bcb66184c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="time-box">
+                <i class="fa fa-clock"></i>
+                <div id="current-time"></div>
+            </div>
+            <div class="top-icon">
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-facebook"></i>
+                <i class="fab fa-discord"></i>
+                <i class="fa fa-youtube"> </i>
+            </div>
+             <div class="user-box">
+                <div class="log-in"><a href="{%url 'Login'%}">Login</a></div>
+                <div class="sign-up"><a href="{%url 'SignUp'%}">Sign up</a></div>
+            </div>
+        </div>
+    </header>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img class="slide1" src="{%static 'image/4.webp'%}" style="width:100%" >
+        </div>
+
+        <div class="mySlides fade">
+            <img class="slide2" src="{%static 'image/Scanned.png'%}" style="width:100%" >
+        </div>
+
+        <div class="mySlides fade">
+            <img class="slide3" src="{% static 'image/image.png'%}" style="width:100%" >
+        </div>
+
+        <div class="mySlides fade">
+            <img class="slide4" src="{%static 'image/poet.png'%}" style="width:100%"  >
+        </div>
+
+    </div>
+    <br>
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>
